@@ -1,6 +1,9 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import logo from './logo.svg';
 import './App.css';
+import Hello from './Containers/Hello';
+import store from './store/index';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <Provider store={store}>
+        <Hello />
+      </Provider>
     </div>
   );
 }
